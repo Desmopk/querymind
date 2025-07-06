@@ -89,4 +89,17 @@ User Prompt →
 - Backend: Deployable via Docker, Uvicorn/Gunicorn
 - Frontend: Flutter web or native builds
 - Future enhancements: Vector DB integration, Authentication, Chat history
+📂 Repository Structure
+```bash
+querymind/
+├── backend/          # FastAPI backend
+│   ├── main.py
+│   ├── services/     # Gemini API, RAG logic
+│   ├── utils/        # Text processing, similarity
+│   └── .env          # API keys & config
+└── flutter_client/   # Flutter frontend
+    ├── lib/
+    ├── assets/
+    └── pubspec.yaml
+```
 
