@@ -92,14 +92,29 @@ User Prompt →
 📂 Repository Structure
 ```bash
 querymind/
-├── backend/          # FastAPI backend
-│   ├── main.py
-│   ├── services/     # Gemini API, RAG logic
-│   ├── utils/        # Text processing, similarity
-│   └── .env          # API keys & config
-└── flutter_client/   # Flutter frontend
+├── backend/                     # FastAPI backend
+│   ├── main.py                  # FastAPI app entrypoint
+│   ├── requirements.txt        # Python dependencies
+│   ├── .env.example             # Template for env variables (e.g. Gemini API key)
+│   ├── services/                # Modules for Gemini integration, retrieval logic
+│   │   ├── rag.py               # Core RAG logic (search + similarity + LLM)
+│   │   ├── gemini_api.py        # Wrapper around Gemini API calls
+│   │   └── docs_search.py       # Web/document search and retrieval
+│   └── websocket.py            # WebSocket endpoint implementation for streaming
+└── flutter_client/              # Flutter frontend app
     ├── lib/
-    ├── assets/
-    └── pubspec.yaml
+    │   ├── main.dart           # Entrypoint for Flutter app
+    │   ├── pages/              # UI screens (e.g. Home, Chat)
+    │   │   ├── home_page.dart
+    │   │   └── chat_page.dart
+    │   ├── models/             # Data models (e.g. message, stream models)
+    │   ├── services/           # API clients (REST and WebSocket)
+    │   │   ├── api_service.dart
+    │   │   └── ws_service.dart
+    │   ├── widgets/            # Shared UI components (Markdown viewer, skeleton loader)
+    │   └── utils/              # Helpers (Markdown formatter, constants)
+    ├── assets/                 # Images, fonts
+    └── pubspec.yaml            # Dart & Flutter dependencies
+
 ```
 
