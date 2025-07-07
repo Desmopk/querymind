@@ -89,6 +89,7 @@ User Prompt →
 - Backend: Deployable via Docker, Uvicorn/Gunicorn
 - Frontend: Flutter web or native builds
 - Future enhancements: Vector DB integration, Authentication, Chat history
+  
 📂 Repository Structure
 ```bash
 querymind/
